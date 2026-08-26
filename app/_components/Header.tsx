@@ -1,6 +1,8 @@
 import Logo from "./Logo";
 import Link from "next/link";
 import Image from "next/image";
+import { MobileMenu } from "./MobileMenu";
+import { Button } from "@/components/ui/button";
 
 const socialLinks = [
     {
@@ -21,18 +23,20 @@ const socialLinks = [
         icon: "/icons/Email.svg",
         alt: "Ícone de e-mail"
     },
-    {
-        id: 4,
-        href: "",
-        icon: "/icons/Menu.svg",
-        alt: "Ícone de menu"
-    }
+    // {
+    //     id: 4,
+    //     href: "",
+    //     icon: "/icons/Menu.svg",
+    //     alt: "Ícone de menu"
+    // }
 ]
 
 const Header = () => {
     return ( 
         <header className="bg-[#050714] py-3.5 px-5 flex items-center justify-between border-b border-[#8B5CF6]/12">
-            <Logo />
+            <Link href="/">
+                <Logo />
+            </Link>
             <div className="flex items-center gap-3">
                 {
                     socialLinks.map((social) => (
@@ -41,6 +45,11 @@ const Header = () => {
                         </Link>
                     ))
                 }
+                <MobileMenu>
+                    <Button className="bg-[#8B5CF6]/10 py-3.5 px-2 rounded-sm border-2 border-[#8B5CF6]/15">
+                        <Image src="/icons/Menu.svg" height={16} width={16} alt="Ícone de menu" />
+                    </Button>
+                </MobileMenu>
             </div>
         </header>
      );
