@@ -18,7 +18,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="pt-BR"
       className={`${oxanium.className} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col [&::-webkit-scrollbar]:hidden">
+      <body className="min-h-full flex flex-col [&::-webkit-scrollbar]:hidden bg-[#050714]">
         <Header />
         {children}
       </body>

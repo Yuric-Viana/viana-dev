@@ -4,27 +4,12 @@ import Technologies from "./_components/Technologies";
 import TextPurpleRadial from "./_components/TextPurpleRadial";
 import ProjectCard from "./_components/ProjectCard";
 import Link from "next/link";
-
-const projects = [
-  {
-    title: "Help Desk",
-    description: "Plataforma de gestão de chamados com controle de acesso, cálculo de custos e relatórios.",
-    skills: ["Next.js", "TypeScript", "Prisma", "React", "Node.js"],
-    href: "",
-    image: "/projects/HelpDesk.png"
-  },
-  {
-    title: "Moovie App",
-    description: "Aplicação para busca, favoritos e avaliações de filmes com interface moderna.",
-    skills: ["React", "Node.js", "SQLite", "TypeScript"],
-    href: "",
-    image: "/projects/MoovieApp.png"
-  }
-]
+import { MoveUpRight } from "lucide-react";
+import { projects } from "./_constants/project";
 
 export default function Home() {
   return (  
-    <div className="bg-[#050714] min-h-screen ">
+    <div className="min-h-screen pb-5">
       <div className="relative h-150 w-full overflow-visible">
         <Image
           src="/bg-mobilee-home.png"
@@ -45,12 +30,12 @@ export default function Home() {
             <TextPurpleRadial className="font-semibold" text="experiências digitais" />
           </p>
           <div className="mt-7.5 flex items-center gap-2">
-            <Button className="bg-linear-to-l border-2 border-[#7C3AED] from-[#7C3AED] to-[#4F46E5] px-5 py-[20px]">
+            <Link href="/projects" className="text-white rounded-lg bg-linear-to-l border-2 border-[#7C3AED] from-[#7C3AED] to-[#4F46E5] px-5 py-3">
               Ver meus projetos
-            </Button>
-            <Button className="border-2 border-[#8B5CF6] bg-transparent px-5 py-[20px]">
+            </Link>
+            <Link href="/about" className="text-white rounded-lg border-2 border-[#8B5CF6]-[#8B5CF6] bg-transparent px-5 py-3">
               Sobre mim
-            </Button>
+            </Link>
           </div>
           <div className="mt-40">
             <Technologies />
@@ -71,6 +56,13 @@ export default function Home() {
             </Link>
           ))
         }
+      </div>
+
+      <div className="px-5 mt-4">
+        <Link href="/projects" className="w-full text-white rounded-sm bg-[#8B5CF6] inline-flex py-2 justify-center items-center gap-2">
+          Ver todos os meus projetos
+          <MoveUpRight className="size-4" />
+        </Link>
       </div>
     </div>
   );
