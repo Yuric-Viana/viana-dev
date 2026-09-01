@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { DownloadCurriculum } from "../_components/DownloadCurriculum";
-import TextPurpleRadial from "../_components/TextPurpleRadial";
+import { DownloadCurriculum } from "../../components/DownloadCurriculum";
+import TextPurpleRadial from "../../components/TextPurpleRadial";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { statsData } from "../_constants/stats-data";
 

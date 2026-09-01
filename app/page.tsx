@@ -1,21 +1,23 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import Technologies from "./_components/Technologies";
-import TextPurpleRadial from "./_components/TextPurpleRadial";
-import ProjectCard from "./_components/ProjectCard";
+import Technologies from "../components/Technologies";
+import TextPurpleRadial from "../components/TextPurpleRadial";
+import ProjectCard from "../components/ProjectCard";
 import Link from "next/link";
 import { MoveUpRight } from "lucide-react";
 import { projects } from "./_constants/project";
+import { StarsBackground } from "@/components/StarsBackground";
 
 export default function Home() {
   return (  
     <div className="min-h-screen pb-5">
       <div className="relative h-150 w-full overflow-visible">
+        <StarsBackground />
         <Image
           src="/bg-mobilee-home.png"
           alt="Tela de fundo da página inicial"
           fill
-          className="object-cover object-[20%_80%]"
+          className="object-cover object-[20%_80%] -z-[99999999]"
         />
         <div className="absolute inset-0 bg-linear-to-b from-[#050714] via-[#050714]/20 to-[#050714]" />
         <div className="absolute top-10 z-10 w-full px-5">

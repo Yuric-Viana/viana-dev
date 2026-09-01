@@ -13,7 +13,7 @@ import {
   SheetClose,
 } from "@/components/ui/sheet";
 import Image from "next/image";
-import { menuItems } from "../_constants/menu-items";
+import { menuItems } from "../app/_constants/menu-items";
 import { ReactElement } from "react";
 
 export function MobileMenu({ children }: { children: ReactElement }) {

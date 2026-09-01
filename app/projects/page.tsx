@@ -1,7 +1,7 @@
 import { StarsBackground } from "@/components/StarsBackground";
 import { projects } from "../_constants/project";
 import { Badge } from "@/components/ui/badge";
-import ProjectCard from "../_components/ProjectCard";
+import ProjectCard from "../../components/ProjectCard";
 import Link from "next/link";
 
 export default function ProjectPage() {

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import TextPurpleRadial from "../_components/TextPurpleRadial";
+import TextPurpleRadial from "../../components/TextPurpleRadial";
 import { socialLinksData } from "../_constants/social-links";
 import Link from "next/link";
 import { MoveUpRight, Send } from "lucide-react";
