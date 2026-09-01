@@ -1,0 +1,38 @@
+export const socialLinksData = [
+  {
+    id: 1,
+    name: "GitHub",
+    label: "/Yuric-Viana",
+    bg: "bg-[#C4B5FD]/10",
+    border: "border border-[#C4B5FD]/19",
+    href: "https://github.com/Yuric-Viana",
+    icon: "/icons/GitHub.svg",
+  },
+  {
+    id: 2,
+    name: "LinkedIn",
+    label: "/dev-yuri-viana",
+    bg: "bg-[#93C5FD]/10",
+    border: "border border-[#93C5FD]/19",
+    href: "https://www.linkedin.com/in/yuric-viana/",
+    icon:  "/icons/LinkedIn.svg",
+  },
+  {
+    id: 3,
+    name: "E-mail",
+    label: "ycviana@sga.pucminas.br",
+    bg: "bg-[#F9A8D4]/10",
+    border: "border border-[#F9A8D4]/19",
+    href: "mailto:seuemail@email.com",
+    icon:  "/icons/Email.svg",
+  },
+  {
+    id: 4,
+    name: "WhatsApp",
+    label: "(31) 9 9364-0568",
+    bg: "bg-[#86EFAC]/10",
+    border: "border border-[#86EFAC]/19",
+    href: "",
+    icon:  "/icons/WhatsApp.svg",
+  },
+];

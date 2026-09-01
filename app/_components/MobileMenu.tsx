@@ -47,6 +47,7 @@ export function MobileMenu({ children }: { children: ReactElement }) {
                 return (
                   <SheetClose
                     key={item.label}
+                    nativeButton={false}
                     render={
                       <Link
                         href={item.href}

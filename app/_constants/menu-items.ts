@@ -23,7 +23,7 @@ export const menuItems = [
   },
   {
     label: "Habilidades",
-    href: "/abilities",
+    href: "/skills",
     icon: Activity,
   },
   {
