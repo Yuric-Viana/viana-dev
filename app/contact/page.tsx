@@ -7,6 +7,7 @@ import Link from "next/link";
 import { MoveUpRight, Send } from "lucide-react";
 
 import { useState, FormEvent } from "react";
+import { StarsBackground } from "@/components/StarsBackground";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -63,6 +64,8 @@ export default function ContactPage() {
 
   return (
     <div className="p-5">
+      <StarsBackground />
+
       <h1 className="font-bold text-3xl">
         Entre em <TextPurpleRadial text="contato" />
       </h1>

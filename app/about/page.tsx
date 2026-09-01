@@ -3,10 +3,12 @@ import { DownloadCurriculum } from "../../components/DownloadCurriculum";
 import TextPurpleRadial from "../../components/TextPurpleRadial";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { statsData } from "../_constants/stats-data";
+import { StarsBackground } from "@/components/StarsBackground";
 
 export default function AboutPage() {
   return (
     <div className="p-5">
+      <StarsBackground />
       <h1 className="text-3xl font-bold">Sobre mim</h1>
       <strong className="text-2xl">
         Mais que código, <TextPurpleRadial text="propósito." />
@@ -55,7 +57,7 @@ export default function AboutPage() {
       <div className="grid grid-cols-2 gap-3 mt-6">
         {
           statsData.map((data) => (
-            <div key={data.number} className="rounded-lg border border-[#8B5CF6]/30 text-center p-4">
+            <div key={data.number} className="rounded-lg border border-[#8B5CF6]/30 bg-[#0A0F28]/60 text-center p-4">
               <TextPurpleRadial className="font-bold text-3xl" text={data.number} />
               <p className="text-[#62748E]">{data.description}</p>
             </div>

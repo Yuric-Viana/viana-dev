@@ -1,3 +1,4 @@
+import { StarsBackground } from "@/components/StarsBackground";
 import { Database, Server, Sparkles, Wrench } from "lucide-react";
 
 const skillAreas = [
@@ -99,6 +100,7 @@ const colorClasses = {
 export default function SkillsPage() {
   return (
     <div className="px-5 pb-20 pt-16">
+      <StarsBackground />
       <section>
         <h1 className="mt-3 text-3xl font-bold tracking-tight text-[#E2E8F0]">
           Minhas habilidades
@@ -116,7 +118,8 @@ export default function SkillsPage() {
 
         <div className="mt-8 space-y-7">
           {skillAreas.map((skill) => {
-            const colors = colorClasses[skill.color as keyof typeof colorClasses];
+            const colors =
+              colorClasses[skill.color as keyof typeof colorClasses];
 
             return (
               <div key={skill.name}>
@@ -189,17 +192,21 @@ export default function SkillsPage() {
         })}
       </section>
 
-      {/* STACK COMPLETA */}
       <section className="mt-12 rounded-2xl border border-[#8B5CF6]/15 bg-[#0A0F28]/60 p-6">
         <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-[#A855F7]">
           STACK COMPLETA
         </span>
 
-        <div className="mt-7 flex flex-wrap gap-2">
+        <div
+          className="mt-7 grid gap-2"
+          style={{
+            gridTemplateColumns: "repeat(auto-fill, minmax(90px, 1fr))",
+          }}
+        >
           {completeStack.map((skill) => (
             <span
               key={skill}
-              className="rounded-full border border-[#6366F1]/15 bg-[#6366F1]/5 px-3 py-1.5 font-mono text-[11px] text-[#94A3B8]"
+              className="flex w-full items-center justify-center whitespace-nowrap rounded-full border border-[#6366F1]/15 bg-[#6366F1]/5 px-3 py-1.5 font-mono text-[11px] text-[#94A3B8]"
             >
               {skill}
             </span>

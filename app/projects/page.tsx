@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function ProjectPage() {
   return (
     <div className="relative min-h-screen w-full overflow-hidden p-5">
-      {/* <StarsBackground /> */}
+      <StarsBackground />
 
       <h1 className="text-3xl font-bold">Projetos</h1>
 
