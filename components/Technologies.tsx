@@ -55,21 +55,25 @@ const technologies = [
 
 export default function Technologies() {
   return (
-    <section className="flex w-full justify-center">
-      <div className="flex max-w-3xl flex-wrap justify-start gap-3">
-        {technologies.map((technology, index) => (
-          <div
-            key={`${technology.name}-${index}`}
-            className="flex items-center gap-2 rounded-lg border border-[#171B3A] bg-[#080B24] px-3 py-2"
-          >
-            {technology.icon}
+    <div
+      className="grid"
+      style={{
+        gridTemplateColumns: "repeat(auto-fill, minmax(100px, 1fr))",
+        gap: "1rem",
+      }}
+    >
+      {technologies.map((technology, index) => (
+        <div
+          key={`${technology.name}-${index}`}
+          className="flex items-center gap-2 rounded-lg border border-[#171B3A] bg-[#080B24] px-3 py-2"
+        >
+          {technology.icon}
 
-            <span className="font-mono text-sm text-slate-400">
-              {technology.name}
-            </span>
-          </div>
-        ))}
-      </div>
-    </section>
+          <span className="font-mono text-sm text-slate-400">
+            {technology.name}
+          </span>
+        </div>
+      ))}
+    </div>
   );
 }
