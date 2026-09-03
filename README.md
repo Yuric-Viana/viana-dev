@@ -44,7 +44,6 @@ O projeto foi concebido com uma estética *Dark/Space Theme*, focando em **exper
 - **PostgreSQL / SQLite** — Persistência de dados relacional.
 
 **DevOps & Ferramentas**
-- **Docker** — Conteinerização para padronização de ambiente de desenvolvimento.
 - **Git & GitHub** — Controle de versão e gerenciamento de código.
 - **Vercel** — Hospedagem e deploy contínuo do front-end.
 
