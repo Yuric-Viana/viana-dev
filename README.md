@@ -201,9 +201,9 @@ O projeto está hospedado gratuitamente na **Vercel**, com deploy contínuo a pa
 
 [![Seção de Contato](https://github.com/Yuric-Viana/viana-dev/raw/main/public/figma/Contact.png)](/Yuric-Viana/viana-dev/blob/main/public/figma/Contact.png)
 
-- 📧 E-mail: *(adicione seu e-mail de contato)*
-- 💼 LinkedIn: *(adicione o link do seu LinkedIn)*
-- 📱 WhatsApp: *(adicione o link/número, se desejar disponibilizar)*
+- 📧 E-mail: ycvian@sga.pucminas.br
+- 💼 LinkedIn: https://www.linkedin.com/in/dev-yuri-viana/
+- 📱 WhatsApp: (31) 9 9364-0568
 - 🐙 GitHub: [github.com/Yuric-Viana](https://github.com/Yuric-Viana)
 
 ---
