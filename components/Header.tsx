@@ -34,7 +34,7 @@ const Header = () => {
             <div className="flex items-center gap-3 ml-auto">
                 {
                     socialLinks.map((social) => (
-                        <Link className="bg-[#8B5CF6]/10 p-2 rounded-sm border border-[#8B5CF6]/15" key={social.id} href={social.href} target="_blank">
+                        <Link className="bg-[#8B5CF6]/10 p-2 lg:p-3 rounded-sm border border-[#8B5CF6]/15" key={social.id} href={social.href} target="_blank">
                             <Image src={social.icon} height={16} width={16} alt={social.alt} />
                         </Link>
                     ))
