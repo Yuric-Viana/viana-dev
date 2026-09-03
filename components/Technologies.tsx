@@ -65,7 +65,7 @@ export default function Technologies() {
       {technologies.map((technology, index) => (
         <div
           key={`${technology.name}-${index}`}
-          className="flex items-center gap-2 rounded-lg border border-[#171B3A] bg-[#080B24] px-3 py-2"
+          className="flex items-center gap-2 rounded-lg border border-[#171B3A] bg-[#080B24] px-3 py-2 lg:px-4 lg:py-3"
         >
           {technology.icon}
 
