@@ -23,21 +23,15 @@ const socialLinks = [
         icon: "/icons/Email.svg",
         alt: "Ícone de e-mail"
     },
-    // {
-    //     id: 4,
-    //     href: "",
-    //     icon: "/icons/Menu.svg",
-    //     alt: "Ícone de menu"
-    // }
 ]
 
 const Header = () => {
     return ( 
         <header className="bg-[#050714] py-3.5 px-5 flex items-center justify-between border-b border-[#8B5CF6]/12">
-            <Link href="/">
+            <Link href="/" className="lg:hidden shrink-0">
                 <Logo />
             </Link>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 ml-auto">
                 {
                     socialLinks.map((social) => (
                         <Link className="bg-[#8B5CF6]/10 p-2 rounded-sm border border-[#8B5CF6]/15" key={social.id} href={social.href} target="_blank">
@@ -46,7 +40,7 @@ const Header = () => {
                     ))
                 }
                 <MobileMenu>
-                    <Button className="bg-[#8B5CF6]/10 py-3.5 px-2 rounded-sm border-2 border-[#8B5CF6]/15">
+                    <Button className="bg-[#8B5CF6]/10 py-3.5 px-2 rounded-sm border-2 border-[#8B5CF6]/15 lg:hidden">
                         <Image src="/icons/Menu.svg" height={16} width={16} alt="Ícone de menu" />
                     </Button>
                 </MobileMenu>

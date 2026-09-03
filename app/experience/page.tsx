@@ -1,5 +1,3 @@
-import { StarsBackground } from "@/components/StarsBackground";
-
 const experiences = [
   {
     id: 1,
@@ -24,8 +22,6 @@ const experiences = [
 export default function ExperiencePage() {
   return (
     <div className="px-5 pb-20 pt-5">
-      <StarsBackground />
-
       <section>
         <h1 className="mt-3 text-3xl font-bold tracking-tight text-[#E2E8F0]">
           Minha jornada

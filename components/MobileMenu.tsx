@@ -22,10 +22,9 @@ export function MobileMenu({ children }: { children: ReactElement }) {
       <SheetTrigger nativeButton render={children} />
 
       <SheetContent
-        side="right"
-        className="min-w-screen bg-[#050714] border-[#8B5CF6]/15 p-0"
+        className="min-w-screen bg-[#050714] border-[#8B5CF6]/15 [&::-webkit-scrollbar]:hidden"
       >
-        <div className="flex min-h-screen flex-col">
+        <div className="flex flex-col">
           <header className="flex items-center justify-between px-5 py-4 border-b border-[#8B5CF6]/12">
             <span className="font-bold text-xl text-[#A78BFA]">YV</span>
 
@@ -39,7 +38,7 @@ export function MobileMenu({ children }: { children: ReactElement }) {
             />
           </header>
 
-          <main className="flex-1 px-6 pt-24">
+          <main className="flex-1 px-6 pt-16">
             <nav className="space-y-2">
               {menuItems.map((item) => {
                 const Icon = item.icon;
@@ -64,7 +63,7 @@ export function MobileMenu({ children }: { children: ReactElement }) {
             </nav>
           </main>
 
-          <footer className="border-t border-[#8B5CF6]/12 px-6 py-6">
+          <footer className="border-t border-[#8B5CF6]/12 my-6 px-6 py-6">
             <div className="grid grid-cols-3 gap-2">
               <Link
                 href="https://github.com/Yuric-Viana"
@@ -77,7 +76,7 @@ export function MobileMenu({ children }: { children: ReactElement }) {
                   width={16}
                   height={16}
                 />
-                GitHub
+                <p className="max-[332px]:hidden">GitHub</p>
               </Link>
 
               <Link
@@ -91,7 +90,7 @@ export function MobileMenu({ children }: { children: ReactElement }) {
                   width={16}
                   height={16}
                 />
-                LinkedIn
+                <p className="max-[332px]:hidden">LinkedIn</p>
               </Link>
 
               <a
@@ -99,7 +98,7 @@ export function MobileMenu({ children }: { children: ReactElement }) {
                 className="flex items-center justify-center gap-2 rounded-xl border border-[#8B5CF6]/20 bg-[#8B5CF6]/5 px-3 py-4 text-sm text-[#90A1B9]"
               >
                 <Mail size={16} />
-                E-mail
+                <p className="max-[332px]:hidden">E-mail</p>
               </a>
             </div>
           </footer>

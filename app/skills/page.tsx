@@ -99,9 +99,9 @@ const colorClasses = {
 
 export default function SkillsPage() {
   return (
-    <div className="px-5 pb-20 pt-16">
-      <StarsBackground />
-      <section>
+    <div className="p-5 pb-20">
+      
+      <section className="lg:mb-16">
         <h1 className="mt-3 text-3xl font-bold tracking-tight text-[#E2E8F0]">
           Minhas habilidades
         </h1>
@@ -111,86 +111,79 @@ export default function SkillsPage() {
         </p>
       </section>
 
-      <section className="mt-16 rounded-2xl border border-[#8B5CF6]/15 bg-[#0A0F28]/60 p-6">
-        <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-[#A855F7]">
-          DOMÍNIO POR ÁREA
-        </span>
-
-        <div className="mt-8 space-y-7">
-          {skillAreas.map((skill) => {
-            const colors =
-              colorClasses[skill.color as keyof typeof colorClasses];
-
-            return (
-              <div key={skill.name}>
-                <div className="flex items-end justify-between gap-4">
-                  <div>
-                    <h2 className="text-sm font-semibold text-[#E2E8F0]">
-                      {skill.name}
-                    </h2>
-
-                    <p className="mt-1 text-xs text-[#64748B]">
-                      {skill.description}
-                    </p>
+      <div className="lg:grid lg:grid-cols-2 lg:gap-6">
+        <section className="mt-12 lg:mt-0 rounded-2xl border border-[#8B5CF6]/15 bg-[#0A0F28]/60 p-6">
+          <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-[#A855F7]">
+            DOMÍNIO POR ÁREA
+          </span>
+          <div className="mt-8 space-y-7">
+            {skillAreas.map((skill) => {
+              const colors =
+                colorClasses[skill.color as keyof typeof colorClasses];
+              return (
+                <div key={skill.name}>
+                  <div className="flex items-end justify-between gap-4">
+                    <div>
+                      <h2 className="text-sm font-semibold text-[#E2E8F0]">
+                        {skill.name}
+                      </h2>
+                      <p className="mt-1 text-xs text-[#64748B]">
+                        {skill.description}
+                      </p>
+                    </div>
+                    <span
+                      className={`font-mono text-sm font-semibold ${colors.text}`}
+                    >
+                      {skill.percentage}%
+                    </span>
                   </div>
-
+                  <div className="mt-2 h-1 overflow-hidden rounded-full bg-[#171B2F]">
+                    <div
+                      className={`h-full rounded-full ${colors.bar}`}
+                      style={{
+                        width: `${skill.percentage}%`,
+                      }}
+                    />
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+        <section className="mt-6 lg:mt-0 space-y-4">
+          {categories.map((category) => {
+            const colors =
+              colorClasses[category.color as keyof typeof colorClasses];
+            return (
+              <div
+                key={category.id}
+                className="rounded-2xl border border-[#8B5CF6]/15 bg-[#0A0F28]/60 p-5"
+              >
+                <div className="mb-4 flex items-center gap-2">
                   <span
+                    className={`size-2 rounded-full ${colors.bar} shadow-[0_0_8px_currentColor]`}
+                  />
+                  <h2
                     className={`font-mono text-sm font-semibold ${colors.text}`}
                   >
-                    {skill.percentage}%
-                  </span>
+                    {category.title}
+                  </h2>
                 </div>
-
-                <div className="mt-2 h-1 overflow-hidden rounded-full bg-[#171B2F]">
-                  <div
-                    className={`h-full rounded-full ${colors.bar}`}
-                    style={{
-                      width: `${skill.percentage}%`,
-                    }}
-                  />
+                <div className="flex flex-wrap gap-2">
+                  {category.skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className={`rounded-full border px-3 py-1 font-mono text-[11px] ${colors.border} ${colors.background} ${colors.text}`}
+                    >
+                      {skill}
+                    </span>
+                  ))}
                 </div>
               </div>
             );
           })}
-        </div>
-      </section>
-
-      <section className="mt-6 space-y-4">
-        {categories.map((category) => {
-          const colors =
-            colorClasses[category.color as keyof typeof colorClasses];
-
-          return (
-            <div
-              key={category.id}
-              className="rounded-2xl border border-[#8B5CF6]/15 bg-[#0A0F28]/60 p-5"
-            >
-              <div className="mb-4 flex items-center gap-2">
-                <span
-                  className={`size-2 rounded-full ${colors.bar} shadow-[0_0_8px_currentColor]`}
-                />
-
-                <h2
-                  className={`font-mono text-sm font-semibold ${colors.text}`}
-                >
-                  {category.title}
-                </h2>
-              </div>
-
-              <div className="flex flex-wrap gap-2">
-                {category.skills.map((skill) => (
-                  <span
-                    key={skill}
-                    className={`rounded-full border px-3 py-1 font-mono text-[11px] ${colors.border} ${colors.background} ${colors.text}`}
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-          );
-        })}
-      </section>
+        </section>
+      </div>
 
       <section className="mt-12 rounded-2xl border border-[#8B5CF6]/15 bg-[#0A0F28]/60 p-6">
         <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-[#A855F7]">
@@ -200,7 +193,7 @@ export default function SkillsPage() {
         <div
           className="mt-7 grid gap-2"
           style={{
-            gridTemplateColumns: "repeat(auto-fill, minmax(90px, 1fr))",
+            gridTemplateColumns: "repeat(auto-fill, minmax(80px, 1fr))",
           }}
         >
           {completeStack.map((skill) => (
