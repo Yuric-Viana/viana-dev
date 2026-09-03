@@ -65,11 +65,23 @@ export default function Technologies() {
       {technologies.map((technology, index) => (
         <div
           key={`${technology.name}-${index}`}
-          className="flex items-center gap-2 rounded-lg border border-[#171B3A] bg-[#080B24] px-3 py-2 lg:px-4 lg:py-3"
+          className="
+            flex items-center gap-2
+            rounded-lg
+            border border-[#171B3A]
+            bg-[#080B24]
+            px-3 py-2
+            lg:px-4 lg:py-3
+            transition-all duration-300 ease-out
+            hover:-translate-y-1
+            hover:border-purple-500/50
+            hover:bg-[#0C1030]
+            hover:shadow-[0_8px_25px_rgba(139,92,246,0.12)]
+          "
         >
           {technology.icon}
 
-          <span className="font-mono text-sm text-slate-400">
+          <span className="font-mono text-sm text-slate-400 transition-colors duration-300 group-hover:text-slate-200">
             {technology.name}
           </span>
         </div>
